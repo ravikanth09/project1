@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEART</title>
+</head>
+<style>
+    body
+    {
+        background-color:black;
+    }
+    .downbtube
+    {
+        height:50px;
+        width:20px;
+        background-color:dodgerblue;
+        border-bottom-right-radius:5px;
+        border-bottom-left-radius:5px; 
+        position: absolute;
+        top:60%;
+        left:50%; 
+    }
+    .downrtube
+    {
+        height:50px;
+        width:20px;
+        background-color:red;
+        border-bottom-right-radius:5px;
+        border-bottom-left-radius:5px; 
+        position: absolute;
+        top:63%;
+        left:52%; 
+    }
+    .heart1
+    {
+    height:125px;
+    width:125px;
+    background-color:crimson;
+    border-top-left-radius:9px;
+    border-bottom-right-radius:20px;
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 100px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    }
+    .reducover1
+    {
+        height:40px;
+        width:75px;
+        background-color: brown;
+        border-top-left-radius:190px;
+	border-top-right-radius:30px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius:20px;
+        transform: rotate(-70deg);
+        position: absolute;
+        top:53%;
+        left:48%;
+    }
+    .reducover2
+    {
+        height:50px;
+        width:45px;
+        background-color: brown;
+        border-top-right-radius:25px;
+        border-top-left-radius: 5px;
+        border-bottom-right-radius:50px;
+        position: absolute;
+        top:50%;
+        left:50%;
+    }
+    .redcoverside2
+    {
+        height:20px;
+        width:30px;
+        background-color:red;
+        border-top-left-radius: 9px;
+        border-bottom-left-radius:6px;
+        position:absolute;
+        top:55%;
+        left:48%;
+
+    }
+    .redcoverside1
+    {
+        height:20px;
+        width:40px;
+        background-color:red;
+        border-top-left-radius: 9px;
+        border-bottom-left-radius:6px;
+        position:absolute;
+        top:51%;
+        left:48%;
+    }
+    .upperbtube1
+    {
+        height:70px;
+        width:20px;
+        background-color:dodgerblue;
+        border-top-right-radius:5px;
+        border-top-left-radius:5px; 
+        position: absolute;
+        top:41%;
+        left:50%; 
+    }
+    .upperbtube2
+    {
+        height:40px;
+        width:18px;
+        background-color:dodgerblue;
+        border-top-right-radius:5px;
+        border-top-left-radius:5px; 
+        transform: rotate(55deg);
+        position: absolute;
+        top:42%;
+        left:51%; 
+    }
+    .redubback1
+    {
+        height:80px;
+        width:50px;
+        background-color:red;
+        border-top-right-radius:10px;
+        border-top-left-radius:30px; 
+        position: absolute;
+        top:41%;
+        left:51%;  
+    }
+    .blueuponheart1
+    {
+        height:45px;
+        width:25px;
+        background-color:indigo;
+        border-bottom-right-radius:5px;
+        border-top-left-radius:18px;
+        border-bottom-left-radius:20px; 
+        position: absolute;
+        top:46%;
+        left:52%; 
+    }
+    .blueuponheart2
+    {
+        height:35px;
+        width:18px;
+        background-color:indigo;
+        border-top-right-radius:5px;
+        border-bottom-left-radius:5px;
+        border-top-left-radius:5px; 
+        transform: rotate(80deg);
+        position: absolute;
+        top:45%;
+        left:53%; 
+    }
+    .sidebluetube1
+    {
+        height:30px;
+        width:15px;
+        background-color:indigo;
+        border-bottom-right-radius:5px;
+        border-bottom-left-radius:5px; 
+        transform: rotate(80deg);
+        position: absolute;
+        top:42%;
+        left:49%;
+    }
+    .sidebluetube2
+    {
+        height:30px;
+        width:15px;
+        background-color:indigo;
+        border-bottom-right-radius:5px;
+        border-bottom-left-radius:5px; 
+        transform: rotate(80deg);
+        position: absolute;
+        top:45%;
+        left:49%;
+    }
+    .rightrtube1
+    {
+        height:20px;
+        width:30px;
+        background-color:red;
+        border-bottom-right-radius:5px;
+        border-top-right-radius:5px;
+        transform: rotate(-15deg);
+        position: absolute;
+        top: 52%;
+        left:55%;
+    }
+    .rightrtube2
+    {
+        height:20px;
+        width:30px;
+        background-color:red;
+        border-bottom-right-radius:5px;
+        border-top-right-radius:5px;
+        transform: rotate(2deg);
+        position: absolute;
+        top: 56%;
+        left:56%;
+    }
+    .rtubes-1
+    {
+    height:25px;
+    width:15px;
+    border-top-right-radius:5px;
+    border-top-left-radius:5px;
+    background-color:red;
+    transform: rotate(-15deg);
+    position:absolute;
+    left:52%;
+    top:38%;
+    }
+    .rtubes-2
+    {
+    height:30px;
+    width:11px;
+    border-top-right-radius:4px;
+    border-top-left-radius:4px;
+    background-color:red;
+    transform: rotate(15deg);
+    position:absolute;
+    left:53%;
+    top:37%;
+    }
+    .rtubes-3
+    {
+    height:30px;
+    width:11px;
+    border-top-right-radius:5px;
+    border-top-left-radius:5px;
+    background-color:red;
+    transform: rotate(35deg);
+    position:absolute;
+    left:54%;
+    top:38%;
+    }
+    .finalredcover
+    {
+     height:20px;
+     width:30px;
+     background-color:brown;
+     border-top-right-radius:60px;
+     border-bottom-right-radius:15px;
+     border-top-left-radius:15px;
+     border-bottom-left-radius:15px;
+     transform: rotate(25deg);
+     position:absolute;
+     top:50%;
+      left:54%;
+    }
+</style>
+<body>
+    <div class="downbtube"></div><div class="downrtube"></div><div class="rtubes-1"></div><div class="rtubes-2"></div><div class="rtubes-3"></div><div class="redubback1"></div><div class="sidebluetube1"></div><div class="sidebluetube2"></div><div class="upperbtube1"></div><div class="upperbtube2"></div><div class="rightrtube1"></div><div class="rightrtube2"></div>
+    <div class="heart1"></div><div class="blueuponheart1"></div><div class="blueuponheart2"></div>
+    <div class="redcoverside1"></div><div class="redcoverside2"></div><div class="reducover2"></div><div class="reducover1"></div><div class="finalredcover"></div>
+</body>
+</html>

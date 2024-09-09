@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello doctor</title>
+</head>
+<style>
+    body{
+        background-color:burlywood;
+    }
+    #nm{
+        font-size:70px;
+        text-align:center;
+        color:white;
+        position:absolute;
+        top:72%;
+        left:33%;
+    }
+    svg{
+        height:900px;
+        width:900px;
+        position:absolute;
+        left:18%;
+        top:35%;
+    }
+    #line path{
+        stroke-dasharray: 1564;
+        stroke-dashoffset: 1564;
+        animation: line-anim 4s linear infinite;
+    }
+    
+    @keyframes line-anim {
+        to{
+            stroke-dashoffset: 0;
+        }
+    }
+    #txt{
+        height:50px;
+        width:600px;
+        border:2px solid white;
+        background-color: black;
+        color:white;
+        border-radius: 50px;
+        font-size:30px;
+        text-align:start;
+        position:absolute;
+        top:5%;
+        left:27%;
+    }
+    .eye1{
+        height:150px;
+        width:210px;
+        background-color: ivory;
+        border-radius: 50%;
+        position:absolute;
+        top:20%;
+        left:30%;
+    }
+    .eye2{
+        height:150px;
+        width:210px;
+        background-color: ivory;
+        border-radius: 50%;
+        position:absolute;
+        top:20%;
+        left:55%;
+    }
+    .ball1{
+        height:100px;
+        width:110px;
+        background-color: black;
+        border-radius: 50%;
+        position:absolute;
+        top:20%;
+        left:30%;
+    }
+    .ball2{
+        height:100px;
+        width:110px;
+        background-color: black;
+        border-radius: 50%;
+        position:absolute;
+        top:15%;
+        left:20%;
+    }
+    #e1{
+        font-size:230px;
+        position:absolute;
+        top:15px;
+        left:545px;
+        transform: rotate(90deg);
+    }
+    #e2{
+        font-size:230px;
+        position:absolute;
+        top:15px;
+        left:925px;
+        transform: rotate(90deg);
+    }
+    .ear{
+        height:300px;
+        width:150px;
+        background-color:navajowhite;
+        border-top-left-radius:50%;
+        border-bottom-left-radius:50%;
+        border-top-right-radius: 43%;
+        border-bottom-right-radius: 13%;
+        border:1px solid black;
+        transform:rotate(-10deg);
+        position:absolute;
+       left:15%;
+       top:25%;
+    }
+    .ear1{
+        height:150px;
+        width:100px;
+        background-color:burlywood;
+        border-top-left-radius:50%;
+        border-bottom-left-radius:50%;
+        border-top-right-radius: 43%;
+        border-bottom-right-radius: 13%;
+        border:1px solid black;
+        transform:rotate(10deg);
+        position:absolute;
+       left:15%;
+       top:25%;
+    }
+    .ear2{
+        height:100px;
+        width:50px;
+        background-color:burlywood;
+        border-top-left-radius:50%;
+        border-bottom-left-radius:50%;
+        border-top-right-radius: 43%;
+        border-bottom-right-radius: 13%;
+        border:1px solid black;
+        transform:rotate(10deg);
+        position:absolute;
+       left:39%;
+       top:25%;
+    }
+    .b2{
+        height:30px;
+        width:30px;
+        border-radius:50%;
+        background-color: black;
+        position:absolute;
+        top:70%;
+        left:30%;
+
+    }
+    .earl{
+        height:300px;
+        width:150px;
+        background-color:navajowhite;
+        border-top-left-radius:50%;
+        border-bottom-left-radius:13%;
+        border-top-right-radius: 43%;
+        border-bottom-right-radius: 50%;
+        border:1px solid black;
+        transform:rotate(10deg);
+        position:absolute;
+       left:72%;
+       top:25%;
+    }
+    .ear1l{
+        height:150px;
+        width:100px;
+        background-color:burlywood;
+        border-top-left-radius:50%;
+        border-bottom-left-radius:13%;
+        border-top-right-radius: 43%;
+        border-bottom-right-radius: 50%;
+        border:1px solid black;
+        transform:rotate(10deg);
+        position:absolute;
+       left:15%;
+       top:25%;
+    }
+    .ear2l{
+        height:100px;
+        width:50px;
+        background-color:burlywood;
+        border-top-left-radius:50%;
+        border-bottom-left-radius:13%;
+        border-top-right-radius: 43%;
+        border-bottom-right-radius: 50%;
+        border:1px solid black;
+        transform:rotate(10deg);
+        position:absolute;
+       left:39%;
+       top:25%;
+    }
+    .b2l{
+        height:30px;
+        width:30px;
+        border-radius:50%;
+        background-color: black;
+        position:absolute;
+        top:70%;
+        left:30%;
+
+    }
+    .nose{
+        height:260px;
+        width:120px;
+        border-top-right-radius:33%;
+        border-top-left-radius:33%;
+        border:2px solid black;
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        background-color: burlywood;
+        transform:rotate(180deg);
+        position:absolute;
+        top:25%;
+        left:46%;
+    }
+    .n1{
+        height:100px;
+        width:280px;
+        border-radius:50%;
+        background-color: burlywood;
+        border: 2px solid black;
+        border-top: 1px solid transparent;
+        position:absolute;
+        top:46%;
+        left:40%;
+    }
+    .bb1{
+        height:40px;
+        width:75px;
+        border-radius:50%;
+        background-color: black;
+        position:absolute;
+        top:48%;
+        left:51%;
+    }
+    .bb2{
+        height:40px;
+        width:75px;
+        border-radius:50%;
+        background-color: black;
+        position:absolute;
+        top:48%;
+        left:44%;
+    }
+    #sub
+    {
+        height:50px;
+        width:110px;
+        border:2px solid white;
+        background-color: black;
+        color:white;
+        font-size:30px;
+        text-align:start;
+        border-radius: 20px;
+        position:absolute;
+        top:5%;
+        left:70%;
+    }
+    .downbtube
+    {
+        height:50px;
+        width:20px;
+        background-color:dodgerblue;
+        border-bottom-right-radius:5px;
+        border-bottom-left-radius:5px; 
+        position: absolute;
+        top:118%;
+        left:10%; 
+    }
+    .downrtube
+    {
+        height:50px;
+        width:20px;
+        background-color:red;
+        border-bottom-right-radius:5px;
+        border-bottom-left-radius:5px; 
+        position: absolute;
+        top:120%;
+        left:12%; 
+    }
+    .heart1
+    {
+    height:125px;
+    width:125px;
+    background-color:crimson;
+    border-top-left-radius:9px;
+    border-bottom-right-radius:20px;
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 100px;
+    position: absolute;
+    top: 110%;
+    left:10%;
+    animation:beat 1s ease-in-out infinite alternate; 
+    }
+    @-webkit-keyframes beat
+    {
+            from
+            {
+                height:125px;
+                width:125px;
+            }
+            to{
+                height:135px;
+                width:135px;
+            }
+    }
+    .reducover1
+    {
+        height:40px;
+        width:75px;
+        background-color: brown;
+        border-top-left-radius:190px;
+	    border-top-right-radius:30px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius:20px;
+        transform: rotate(-70deg);
+        position: absolute;
+        top:113%;
+        left:8%;
+    }
+    .reducover2
+    {
+        height:50px;
+        width:45px;
+        background-color: brown;
+        border-top-right-radius:25px;
+        border-top-left-radius: 5px;
+        border-bottom-right-radius:50px;
+        position: absolute;
+        top:110%;
+        left:10%;
+    }
+    .redcoverside2
+    {
+        height:20px;
+        width:30px;
+        background-color:red;
+        border-top-left-radius: 9px;
+        border-bottom-left-radius:6px;
+        position:absolute;
+        top:114%;
+        left:8%;
+
+    }
+    .redcoverside1
+    {
+        height:20px;
+        width:40px;
+        background-color:red;
+        border-top-left-radius: 9px;
+        border-bottom-left-radius:6px;
+        position:absolute;
+        top:111%;
+        left:8%;
+    }
+    .upperbtube1
+    {
+        height:70px;
+        width:20px;
+        background-color:dodgerblue;
+        border-top-right-radius:5px;
+        border-top-left-radius:5px; 
+        position: absolute;
+        top:102%;
+        left:10%; 
+    }
+    .upperbtube2
+    {
+        height:40px;
+        width:18px;
+        background-color:dodgerblue;
+        border-top-right-radius:5px;
+        border-top-left-radius:5px; 
+        transform: rotate(55deg);
+        position: absolute;
+        top:103%;
+        left:11%; 
+    }
+    .redubback1
+    {
+        height:80px;
+        width:50px;
+        background-color:red;
+        border-top-right-radius:10px;
+        border-top-left-radius:30px; 
+        position: absolute;
+        top:102%;
+        left:11%;  
+    }
+    .blueuponheart1
+    {
+        height:45px;
+        width:25px;
+        background-color:indigo;
+        border-bottom-right-radius:5px;
+        border-top-left-radius:18px;
+        border-bottom-left-radius:20px; 
+        position: absolute;
+        top:106%;
+        left:12%; 
+    }
+    .blueuponheart2
+    {
+        height:35px;
+        width:18px;
+        background-color:indigo;
+        border-top-right-radius:5px;
+        border-bottom-left-radius:5px;
+        border-top-left-radius:5px; 
+        transform: rotate(80deg);
+        position: absolute;
+        top:105%;
+        left:13%; 
+    }
+    .sidebluetube1
+    {
+        height:30px;
+        width:15px;
+        background-color:indigo;
+        border-bottom-right-radius:5px;
+        border-bottom-left-radius:5px; 
+        transform: rotate(80deg);
+        position: absolute;
+        top:104%;
+        left:9%;
+    }
+    .sidebluetube2
+    {
+        height:30px;
+        width:15px;
+        background-color:indigo;
+        border-bottom-right-radius:5px;
+        border-bottom-left-radius:5px; 
+        transform: rotate(80deg);
+        position: absolute;
+        top:107%;
+        left:9%;
+    }
+    .rightrtube1
+    {
+        height:20px;
+        width:30px;
+        background-color:red;
+        border-bottom-right-radius:5px;
+        border-top-right-radius:5px;
+        transform: rotate(-15deg);
+        position: absolute;
+        top: 112%;
+        left:15%;
+    }
+    .rightrtube2
+    {
+        height:20px;
+        width:30px;
+        background-color:red;
+        border-bottom-right-radius:5px;
+        border-top-right-radius:5px;
+        transform: rotate(2deg);
+        position: absolute;
+        top: 115%;
+        left:16%;
+    }
+    .rtubes-1
+    {
+    height:25px;
+    width:15px;
+    border-top-right-radius:5px;
+    border-top-left-radius:5px;
+    background-color:red;
+    transform: rotate(-15deg);
+    position:absolute;
+    left:12%;
+    top:100%;
+    }
+    .rtubes-2
+    {
+    height:30px;
+    width:11px;
+    border-top-right-radius:4px;
+    border-top-left-radius:4px;
+    background-color:red;
+    transform: rotate(15deg);
+    position:absolute;
+    left:13%;
+    top:99%;
+    }
+    .rtubes-3
+    {
+    height:30px;
+    width:11px;
+    border-top-right-radius:5px;
+    border-top-left-radius:5px;
+    background-color:red;
+    transform: rotate(35deg);
+    position:absolute;
+    left:14%;
+    top:99%;
+    }
+    .finalredcover
+    {
+     height:20px;
+     width:30px;
+     background-color:brown;
+     border-top-right-radius:60px;
+     border-bottom-right-radius:15px;
+     border-top-left-radius:15px;
+     border-bottom-left-radius:15px;
+     transform: rotate(25deg);
+     position:absolute;
+     top:110%;
+      left:14%;
+    }
+</style>
+<body>
+    <h1 id="nm">HELLO DOCTOR</h1><br>
+<svg id="line" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 497 111"><defs><style>.cls-1{fill:none;stroke:#ed1c24;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><path class="cls-1" d="M52.5,176.5l5.21-6.94a1.07,1.07,0,0,1,1.66-.07l5.75,6.57a1.26,1.26,0,0,0,1,.44H77.44a2.19,2.19,0,0,0,2.19-2.06L84.5,95.5l4.82,104.12a.45.45,0,0,0,.89.06l4.22-22.81a.45.45,0,0,1,.44-.37h22.91A1.87,1.87,0,0,0,119,176l14.32-13.43a1.27,1.27,0,0,1,2,.28l7.79,13a1.37,1.37,0,0,0,1.18.67h39.56a1.35,1.35,0,0,0,1.06-.53l5.27-7a.44.44,0,0,1,.69,0l6.28,7.17a1.21,1.21,0,0,0,.91.41h12a.45.45,0,0,0,.45-.42l5-79.58,4.82,102.25a.45.45,0,0,0,.89.06l4.22-21.95a.44.44,0,0,1,.44-.36H289.5c2,0,28,2,18,10-5,4-27.35-18.65-36-43v0c-7-26,24-33,42-4,20,30-5,40,2,3a.22.22,0,0,0,0-.08c.05-11.59,20.5-50.58,36.27-28.5a29.89,29.89,0,0,1,5.15,21c-4.29,34.9-30.91,58.91-36.42,63.5-6,5-12-5,0-15,11.5-9.58,37.68-17.33,49.53-15.32,1.21.2,2.41.39,3.62.51,12.47,1.21,29.16,4.84,36.2,9.37a.45.45,0,0,0,.7-.34L415.5,98.5l6,106,4.81-25a1.23,1.23,0,0,1,1.21-1H447a4,4,0,0,0,2.69-1l15.06-13.39a2,2,0,0,1,3,.47l7.08,11.8a2.37,2.37,0,0,0,2,1.14h37.8a1.63,1.63,0,0,0,1.35-.72l4.79-7.18a1,1,0,0,1,1.61-.11l7,7.86a.41.41,0,0,0,.33.15h11.62a1.24,1.24,0,0,0,1.25-1.17L547.5,98.5" transform="translate(-51.5 -94.5)"/></svg>
+ <form><input type="text" placeholder="search here" id="txt"> 
+ <input type="submit" id="sub"></form>
+ <div class="eye1">
+    <div class="ball1"></div></div>
+    <div class="eye2"><div class="ball2"></div></div>
+    <div id="e1">(</div>
+<div id="e2">(</div>
+<div class="ear"><div class="ear1"><div class="ear2"><div class="b2"></div></div></div></div>
+<div class="earl"><div class="ear1l"><div class="ear2l"><div class="b2l"></div></div></div></div>
+<div class="nose"></div><div class="n1"></div><div class="bb1"></div><div class="bb2"></div>
+<div class="main">
+    <div class="downbtube"></div><div class="downrtube"></div><div class="rtubes-1"></div><div class="rtubes-2"></div><div class="rtubes-3"></div><div class="redubback1"></div><div class="sidebluetube1"></div><div class="sidebluetube2"></div><div class="upperbtube1"></div><div class="upperbtube2"></div><div class="rightrtube1"></div><div class="rightrtube2"></div>
+    <div class="heart1"></div><div class="blueuponheart1"></div><div class="blueuponheart2"></div>
+    <div class="redcoverside1"></div><div class="redcoverside2"></div><div class="reducover2"></div><div class="reducover1"></div><div class="finalredcover"></div></div>
+</body>
+<script>
+    var b=document.getElementsByClassName("ball1")
+    var c=document.getElementsByClassName("ball2")
+    document.onmousemove=function(){
+        var x=event.clientX * 100/window.innerWidth+"%";
+        var y=event.clientY * 100/window.innerHeight+"%";
+    
+    for (var i=0;i<2;i++){
+        b[i].style.left=x;
+        b[i].style.top=y;
+        b[i].style.transform="translate(-"+x+",-"+y+")"
+        c[i].style.left=x;
+        c[i].style.top=y;
+        c[i].style.transform="translate(-"+x+",-"+y+")"
+    }
+}
+</script>
+</html>
